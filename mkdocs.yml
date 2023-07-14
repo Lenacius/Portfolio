@@ -1,17 +1,53 @@
+# Project Information
 site_name: Lenacius' Portfolio
+site_url: https://lenacius.github.io/Portfolio/
+site_author: Lenacius Grimpel
+site_description: >-
+  Welcome to my Portfolio, here you'll be able to find my personal projects related to college, Game Development and others.
 
+# Repository
+repo_name: lenacius/Portfolio
+repo_url: https://github.com/lenacius/Portfolio
+
+# Page tree
+nav:
+  - Home: 'index.md'
+  - Projects:
+    - Test1: 'index.md'
+    - Test2: 'index.md'
+
+# Theme Configuration
 theme:
+# Material theme that enables the look
   name: material
+# This enables the navigation on top instead of the left bar
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+# This block refers the button that changes the theme of the page from dark to light, etc.
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+
+# Customization
+extra:
+  annotate:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/lenacius
+    - icon: fontawesome/brands/itch-io
+      link: https://lenacius.itch.io/
